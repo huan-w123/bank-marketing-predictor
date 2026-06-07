@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+envproj/
+
+# Data & models (不进 Git)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Streamlit
+.streamlit/secrets.toml
