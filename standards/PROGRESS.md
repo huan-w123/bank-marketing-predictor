@@ -8,19 +8,19 @@
 
 ## 当前状态 (最后更新: 2026-06-07 · by AI)
 
-- **阶段**：`初始化 / 需求确认`
-- **对应六步流程**：第①步 → 第②步过渡期（需求已编写，尚未建仓）
-- **上一步完成**：`00-project-context.md` 与 `01-requirements.md` 已填写，待人类确认。
-- **下一步 (TODO 第一条)**：人类确认需求后，AI 使用 `gh` 创建 GitHub 仓库（第①步：建仓 + 配 Secrets）。
-- **阻塞项**：等待人类确认 `00` 和 `01` 文档内容。
+- **阶段**：`初始化 / 第①步完成，等待 Secrets 配置`
+- **对应六步流程**：第①步（建仓 done，Secrets 待配置）
+- **上一步完成**：`gh repo create` 创建仓库 `huan-w123/bank-marketing-predictor`，main 分支已推送初始提交。
+- **下一步 (TODO 第一条)**：人类配置 GitHub Secrets（SSH_PRIVATE_KEY / SSH_HOST / SSH_USER）。
+- **阻塞项**：✋ 确认门 1 — 等待人类确认「Secrets 已配置」。
 
 ---
 
 ## 待办清单 (TODO，按优先级)
 
-- [ ] **确认门 ✋1**：人类确认 `00-project-context.md` 与 `01-requirements.md`
-- [ ] ① 建仓：`gh repo create` 创建 `bank-marketing-predictor`，初始化 `.gitignore`、`README.md`
-- [ ] ① 提示人类配置 Secrets（SSH_PRIVATE_KEY / SSH_HOST / SSH_USER）
+- [x] **确认门 ✋1-a**：人类确认 `00-project-context.md` 与 `01-requirements.md`
+- [x] ① 建仓：`gh repo create` 创建 `bank-marketing-predictor`，初始化 `.gitignore`、`README.md`
+- [ ] **✋ 确认门 1-b**：人类配置 Secrets（SSH_PRIVATE_KEY / SSH_HOST / SSH_USER）→ `gh secret list` 验证
 - [ ] ② 开 feature 分支 `feature/1-project-init` 从 main
 - [ ] ③ 模块 1 — 项目骨架：创建目录结构、`requirements.txt`、`requirements-dev.txt`、`Dockerfile`、CI/CD workflows
 - [ ] ③ 模块 2 — 数据加载与校验：`src/analysis.py` 核心函数 + `tests/test_analysis.py`
@@ -52,4 +52,5 @@
 
 ## 里程碑 (DONE)
 
-- [ ] 暂无完成项。
+- [x] 2026-06-07 · 需求文档完成：`00-project-context.md`、`01-requirements.md`（4 条用户故事）、`PROGRESS.md` 初始化
+- [x] 2026-06-07 · 建仓完成：`huan-w123/bank-marketing-predictor`，main 分支含 15 个文件（standards + .gitignore + README）
